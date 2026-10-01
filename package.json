@@ -1,0 +1,32 @@
+{
+  "name": "qms-gm",
+  "version": "1.0.0",
+  "description": "GM on QMS Testnet — smart contract + English frontend (Hardhat + Vite + wagmi/viem)",
+  "private": true,
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:qmsTestnet": "npx hardhat run scripts/deploy.ts --network qmsTestnet",
+    "deploy:ignition": "npx hardhat ignition deploy ./ignition/modules/GM.ts --network qmsTestnet",
+    "verify:qms": "npx hardhat verify --network qmsTestnet",
+    "node:qms-fork": "echo 'QMS is PoUW, use --network qmsTestnet directly. See README.'"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^18.19.50",
+    "chai": "^4.4.1",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "hardhat": "^2.22.15",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}

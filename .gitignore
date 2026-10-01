@@ -1,0 +1,14 @@
+node_modules
+artifacts
+cache
+ignition/deployments
+.env
+coverage
+coverage.json
+gas-report.txt
+typechain-types
+frontend/node_modules
+frontend/dist
+frontend/*.tsbuildinfo
+frontend/vite.config.d.ts
+frontend/vite.config.js
