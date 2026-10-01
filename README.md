@@ -2,15 +2,16 @@
 
 Say GM on QMS Testnet. One click writes one on-chain transaction.
 
+<img width="1380" height="867" alt="image" src="https://github.com/user-attachments/assets/c1ae09ea-2699-4214-a293-8e0d5b44821c" />
+
+
 - Stack: Solidity 0.8.28, Hardhat, Vite, React, TypeScript, wagmi v2, viem v2
-- UI language: English
-- Design: LEXBET dark system (team red plus championship gold on near-black)
+
 
 ## Author
 
-- Built by @hassan_samimi
-- Telegram: https://t.me/hassan_samimi
-- GitHub: https://github.com/Nassami1
+- Built by  https://x.com/hassan_samimi
+
 
 ## Network
 
@@ -109,36 +110,6 @@ npm run preview
 # Preview serves on http://localhost:4173
 ```
 
-## Deploy to Vercel
-
-Option A - Dashboard (recommended):
-
-1. Go to https://vercel.com/new and import `Nassami1/qms-gm`
-2. Set Root Directory to `frontend`
-3. Framework Preset: Vite. Build Command: `npm run build`. Output Directory: `dist`
-4. Environment Variables: add `VITE_GM_ADDRESS` = `0x0f93Dd96B317c66a9aBA32A82c8618b70c4aceA7`
-5. Deploy. No server config needed (static SPA, `vercel.json` rewrites to `index.html`)
-
-Option B - CLI:
-
-```bash
-cd frontend
-npx vercel
-npx vercel --prod
-```
-
-Note: the contract address is already the default in `src/config.ts`, so the
-app works on Vercel even without the env var. Setting `VITE_GM_ADDRESS` in
-the Vercel dashboard overrides it (useful after a redeploy).
-
-## Usage checklist
-
-1. Switch wallet to QMS Testnet (Chain ID 19480)
-2. Fund wallet from the faucet
-3. Connect wallet in the app
-4. Press GM and confirm in the wallet
-5. Open the transaction on QMSScan
-6. Wait 2-3 blocks and check that Total GMs increased
 
 ## Troubleshooting
 
