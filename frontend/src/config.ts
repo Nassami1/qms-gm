@@ -10,10 +10,11 @@ export const config = createConfig({
   },
 });
 
-// TODO: replace after deploy (Step 4 in README).
-// Deployed address goes here, e.g. "0x1234...abcd"
+// Deployed GM contract on QMS Testnet (verified on QMSScan).
+// Public address, safe to hardcode as default. Env var overrides it
+// (e.g. set VITE_GM_ADDRESS in Vercel dashboard for redeploys).
 export const GM_ADDRESS = (import.meta.env.VITE_GM_ADDRESS ||
-  "0x0000000000000000000000000000000000000000") as `0x${string}`;
+  "0x0f93Dd96B317c66a9aBA32A82c8618b70c4aceA7") as `0x${string}`;
 
 export const GM_ABI = [
   {

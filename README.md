@@ -94,7 +94,8 @@ Notes: wait 2-3 blocks (about 20-30 seconds) for counters to update. Do not wait
 cd frontend
 npm install
 cp .env.example .env
-# Edit .env and set VITE_GM_ADDRESS to the deployed contract address.
+# Optional: .env already defaults to the deployed address in src/config.ts.
+# Only edit .env if you redeployed and need a different VITE_GM_ADDRESS.
 
 npm run dev
 # Open http://localhost:5173
@@ -107,6 +108,28 @@ npm run build
 npm run preview
 # Preview serves on http://localhost:4173
 ```
+
+## Deploy to Vercel
+
+Option A - Dashboard (recommended):
+
+1. Go to https://vercel.com/new and import `Nassami1/qms-gm`
+2. Set Root Directory to `frontend`
+3. Framework Preset: Vite. Build Command: `npm run build`. Output Directory: `dist`
+4. Environment Variables: add `VITE_GM_ADDRESS` = `0x0f93Dd96B317c66a9aBA32A82c8618b70c4aceA7`
+5. Deploy. No server config needed (static SPA, `vercel.json` rewrites to `index.html`)
+
+Option B - CLI:
+
+```bash
+cd frontend
+npx vercel
+npx vercel --prod
+```
+
+Note: the contract address is already the default in `src/config.ts`, so the
+app works on Vercel even without the env var. Setting `VITE_GM_ADDRESS` in
+the Vercel dashboard overrides it (useful after a redeploy).
 
 ## Usage checklist
 
